@@ -1,8 +1,5 @@
 #include <iostream>
-//#include <ctime>
 #include <cstdlib> // для функций rand() и srand()
-//#include <windowsx.h>
-//int getRandomNumber();
 using namespace std;
 
 int roll() {
@@ -49,19 +46,7 @@ int main()
                 default:
                     throw runtime_error("suka ty kak eto slomal");
             }
-            //if (FisrtNum == SecondNum == ThirdNum) {
-            //        std::cout << FisrtNum << " " << SecondNum << " " << ThirdNum << "\n" << "big win! \t+" << bet * 10 << "\n";
-            //        MyScore += bet * 10;
-            //}
-            //else if ((FisrtNum == SecondNum) || (FisrtNum == ThirdNum) || (SecondNum == ThirdNum)) {
-            //    std::cout << FisrtNum << " " << SecondNum << " " << ThirdNum << "\n" << "win! \t+" << bet * 5 << "\n";
-            //    MyScore += bet * 5;
-            //}
-            //else {
-            //    std::cout<<FisrtNum << " " << SecondNum << " " << ThirdNum << "\n"<<"lose :(\t -"<< bet << "\n";
-            //    MyScore -= bet;
-            //
-            if(score == 0){
+            if (score == 0) {
                 score += 2000;
                 a++;
                 cout << "lose count: " << a << '\n';
@@ -72,15 +57,6 @@ int main()
         cerr << e.what();
     }
 }
-
-//int getRandomNumber()
-//{
-    //int max = 7;
-    //static const double fraction = 1.0 / (narrow_cast<double>(RAND_MAX) + 1.0);
-    // Равномерно распределяем рандомное число в нашем диапазоне
-    //return narrow_cast<unsigned short>(rand() * fraction * max + min);
-    //return rand()%(max+1);
-//}
 
 /*
 do
