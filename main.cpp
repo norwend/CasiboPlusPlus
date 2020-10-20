@@ -10,7 +10,7 @@ int roll() {
     int first_num = rand()%(max+1);
     int second_num = rand()%(max+1);
     int third_num = rand()%(max+1);
-    cout << '| ' << first_num << " | " << second_num << " | " << third_num << " |\n"; 
+    cout << "| " << first_num << " | " << second_num << " | " << third_num << " |\n"; 
     if ((first_num == second_num) || (third_num == second_num) || (first_num == third_num)) return 1;
     if ((first_num == second_num) && (third_num == second_num)) return 2;
     return 0;
@@ -21,6 +21,7 @@ int main()
     //setlocale(LC_ALL,"Russian"); -- для виндопедиков
     
     long long score = 2000;
+    int a = 0;
     try {
         while (true) {
             cout <<"Ваш балланс: "<< score << "\n";
