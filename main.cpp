@@ -4,9 +4,9 @@ using namespace std;
 
 int roll() {
     int max = 7;
-    int first_num = rand()%(max+1);
-    int second_num = rand()%(max+1);
-    int third_num = rand()%(max+1);
+    int first_num = (rand()%(max+1)+rand()%(max+1))/2;
+    int second_num = (rand()%(max+1)+rand()%(max+1))/2;
+    int third_num = (rand()%(max+1)+rand()%(max+1))/2;
     cout << "| " << first_num << " | " << second_num << " | " << third_num << " |\n"; 
     if ((first_num == second_num) || (third_num == second_num) || (first_num == third_num)) return 1;
     if ((first_num == second_num) && (third_num == second_num)) return 2;
