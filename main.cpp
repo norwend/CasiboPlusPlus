@@ -24,8 +24,8 @@ int main()
     int a = 0;
     try {
         while (true) {
-            cout <<"Ваш балланс: "<< score << "\n";
-            cout << "Введите ставку" << endl;
+            cout <<"Ваш баланс: "<< score << "\n";
+            cout << "Введите ставку: ";
             int bet = 0;
             cin >> bet;
         
