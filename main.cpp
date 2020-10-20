@@ -64,7 +64,7 @@ int main()
             if(score == 0){
                 score += 2000;
                 a++;
-                cout << "lose count: " << a;
+                cout << "lose count: " << a << '\n';
             }
         }
     }
