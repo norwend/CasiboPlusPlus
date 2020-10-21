@@ -53,7 +53,7 @@ int main()
                     score += bet * 100;
                     break;
                 default:
-                    throw runtime_error("suka ty kak eto slomal");
+                    throw std::runtime_error("suka ty kak eto slomal");
             }
             if (score == 0) {
                 score += 2000;
@@ -62,7 +62,7 @@ int main()
             }
         }
     }
-    catch (exception& e) {
+    catch (std::exception& e) {
         std::cerr << e.what();
     }
 }
