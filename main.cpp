@@ -17,8 +17,10 @@ int roll() {
     int second_num = random_num();
     int third_num = random_num();
     print_nums(first_num, second_num, third_num);
-    if ((first_num == second_num) || (third_num == second_num) || (first_num == third_num)) return 1;
-    if ((first_num == second_num) && (third_num == second_num)) return 2;
+    if ((first_num == second_num) || (third_num == second_num) || (first_num == third_num)) 
+	    return 1;
+    if ((first_num == second_num) && (third_num == second_num)) 
+	    return 2;
     return 0;
 }
 
