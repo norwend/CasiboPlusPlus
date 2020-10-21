@@ -1,6 +1,5 @@
 #include <iostream>
 #include <cstdlib> // для функций rand() и srand()
-using namespace std;
 
 int random_num() 
 {
@@ -10,7 +9,7 @@ int random_num()
 
 void print_nums (int first_num, int second_num, int third_num) 
 {
-    cout << "| " << first_num << " | " << second_num << " | " << third_num << " |\n"; 
+    std::cout << "| " << first_num << " | " << second_num << " | " << third_num << " |\n"; 
 }
 
 int roll() {
@@ -31,26 +30,26 @@ int main()
     int a = 0;
     try {
         while (true) {
-            cout <<"Ваш баланс: "<< score << "\n";
-            cout << "Введите ставку: ";
+            std::cout <<"Ваш баланс: "<< score << "\n";
+            std::cout << "Введите ставку: ";
             int bet = 0;
-            cin >> bet;
+            std::cin >> bet;
         
             if (bet > score) {
-              cout << "Ставка слишком велика! (пошёл нахуй)\n";
+              std::cout << "Ставка слишком велика! (пошёл нахуй)\n";
               break;
             }
             switch (roll()) {
                 case 0:
-                    cout << "проебал!\t-" << bet << '\n';
+                    std::cout << "проебал!\t-" << bet << '\n';
                     score -= bet;
                     break;
                 case 1:
-                    cout << "win!\t+" << bet * 5 << '\n';
+                    std::cout << "win!\t+" << bet * 5 << '\n';
                     score += bet * 5;
                     break;
                 case 2:
-                    cout << "big win!\t+" << bet * 100 << '\n';
+                    std::cout << "big win!\t+" << bet * 100 << '\n';
                     score += bet * 100;
                     break;
                 default:
@@ -59,12 +58,12 @@ int main()
             if (score == 0) {
                 score += 2000;
                 a++;
-                cout << "lose count: " << a << '\n';
+                std::cout << "lose count: " << a << '\n';
             }
         }
     }
     catch (exception& e) {
-        cerr << e.what();
+        std::cerr << e.what();
     }
 }
 
